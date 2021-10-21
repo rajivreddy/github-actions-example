@@ -30,9 +30,9 @@ jobs:
       - name: Set environment for branch
         run: |
           if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
-              echo "TAG=master" >> "$TAG"
+              echo "TAG=master" >> $TAG
           else
-              echo "TAG=latest" >> "$TAG"
+              echo "TAG=latest" >> $TAG
           fi
 
       - name: Extract metadata (tags, labels) for Docker
